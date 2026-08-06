@@ -13,7 +13,7 @@
 }
 
 html, body {
-  overflow-x: hidden;
+  overflow-x: hidden; 
   height: auto;
   margin: 0;
 }
@@ -134,12 +134,11 @@ margin-top: 40px;
   display: flex;
 }
 
-  header nav .ul-list li:hover, header nav .ul-list details:hover{
+  header nav .ul-list li:hover {
   border-color: blue;
 }
 
-  header nav .ul-list > li,
-  header nav .ul-list > details {
+  header nav .ul-list li {
   display: flex;
   border-radius: 50px;
   border: 1px solid transparent;
@@ -148,8 +147,7 @@ margin-top: 40px;
   justify-content: center;
 }
 
-header nav .ul-list li a,
-header nav .ul-list details summary {
+header nav .ul-list li a {
     display: flex;
     align-items: center;
     white-space: nowrap;
@@ -217,80 +215,23 @@ header nav .ul-list details summary {
   /* search and login button container */
   .button_div{
     display: flex;
-  }
-
-
-/* drop down */
-
-  header nav .ul-list details summary{
-    cursor: pointer;
-    list-style: none;
-  }
-
-  header nav .ul-list details summary::-webkit-details-marker {
-    display: none;
-  }
-
-  header nav .ul-list details summary::marker{
-    content: "";
-    display: none;
-  }
-
-  header nav .ul-list details ul {
-  position: fixed;
-  top: calc(100% + 40px);
-  left: 0;
-  border: 1px solid red;
-  list-style: none;
-  padding: 8px 0;
-  margin: 4px 0 0;
-  width: 100%;
-  background-color: #f7f7f7;
-  /* new: two-column layout */
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: fit-content;
-  max-height: 350px;
-}
-
-header nav .ul-list details ul li a {
-  display: block;
-  padding: 8px 16px;
-  text-decoration: none;
-  color: red;
-  overflow: auto;
-}
-
-  header nav .ul-list details ul li a:hover{
-    background: #f0f0f0;
-
-  }
-
-  header nav .ul-list details summary span {
-    display: inline-block;
-    transition: transform 0.3s ease;
-  }
-
-  header nav .ul-list details[open] summary span {
-    transform: rotate(180deg);
+    position: relative;
   }
 
   /* first slide */
 
 .first_slide{
     width: 100%;
-    display: flex;
      background: linear-gradient(90deg, blue, white, red); 
     height: fit-content;
 }
 
-.first_slide div{
+ .first_slide .special_card_container{
      display: flex;
   flex-flow: row wrap; 
 justify-content: center;
-    margin-top: 40px;
-}
+    margin-top: 70px;
+} 
 
 .special_container{
   display: block;
@@ -318,9 +259,13 @@ justify-content: center;
   display: flex;
 }
 
-.first_slide div h1{
+.header1{
   display: flex;
-  justify-content: center; 
-} 
+  justify-content: center;
+  align-items: center;
+}
 
+.header1 h1{
+  margin-top: 50px;
+}
 
