@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html, body {
+  overflow-x: hidden; 
+  height: auto;
+  margin: 0;
+}
+
+/* background images */
+.relativ-box{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.relativ-box img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  
+}
+
+
+
+
+/* on image text */
+.on_img{
+  position: absolute;
+  top: calc(100vh - 75vh);
+  left: 10%;
+}
+
+.on_img div h1{
+  color: #ffffff;
+  font-family: bold;
+  font-size: 100px; 
+}
+
+.on_img div h2{
+    margin-left: 92px;
+    font-family: "Allura", cursive;
+    font-size: 60px;
+    font-weight: 30;
+    color: #f4b400;
+}
+
+.on_img div p{
+    font-size: 30px;
+    color: #fffffff0;
+}
+
+.on_img div div a{
+display: inline-block;
+  font-size: 20px;
+  color: white;
+  border-radius: 50px;
+  background: blue;
+  /*we count padding from the order top,right,bottom,left*/
+  padding: 20px 20px 20px 20px;
+  transition: transform 0.2s ease;
+}
+
+.on_img div div a:hover{
+  transform: scale(1.1);
+}
+
+.on_img div div{
+
+margin-top: 40px;
+
+}
+/* nav main  styles */
+  header nav{
+  position: fixed;
+  width: 80%;
+  max-width: 1200px;
+  height: 60px;
+  display: flex;
+  inset: 30px 0 auto 0;
+  margin: 0 auto;
+  top: 30px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 50px;
+  /* border: 2px solid red; */
+  background: rgba(255, 255, 255, 0.5); /* semi-transparent so blur is visible */
+  backdrop-filter: blur(5px);
+  z-index: 10000;;
+}
+
+  header nav .ul-list {
+  display: flex;
+}
+
+  header nav .ul-list li:hover {
+  border-color: blue;
+}
+
+  header nav .ul-list li {
+  display: flex;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  padding: 15px 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+header nav .ul-list li a {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+/* login button */
+.button{
+  margin-right: 10px;
+}
+
+.button a{
+  display: inline-block;
+  font-size: 20px;
+  color: white;
+  border-radius: 50px;
+  background: blue;
+  /*we count padding from the order top,right,bottom,left*/
+  padding: 10px 20px 10px 20px;
+  transition: transform 0.2s ease;
+}
+
+.button a:hover{
+ transform: scale(1.1);
+}
+
+/* logo image */
+  .logo {
+  display: flex;
+  align-items: center;
+  left: 0px;
+  }
+
+  .logo a {
+  display: flex;
+  }
+
+  .logo a img {
+  width: 170px;
+  height: 50px;
+  object-fit: contain;
+  display: block;
+  }
+
+  /* search_icon */
+  .search_icon{
+    margin-right: 20px;
+    border-radius: 50%;
+    padding: 3px;
+     border: 1px solid transparent;
+  }
+
+  .search_icon:hover{
+    border-color: blue;
+  }
+
+  .search_icon img{
+    transform: rotate(9deg);
+    width: 39px;
+    height: 35px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  /* search and login button container */
+  .button_div{
+    display: flex;
+    position: relative;
+  }
+
+  /* first slide */
+
+.first_slide{
+    width: 100%;
+     background: linear-gradient(90deg, blue, white, red); 
+    height: fit-content;
+}
+
+ .first_slide .special_card_container{
+     display: flex;
+  flex-flow: row wrap; 
+justify-content: center;
+    margin-top: 70px;
+} 
+
+.special_container{
+  display: block;
+  position: relative;
+  width: 300px;
+  height: 800px;
+  background: red;
+  flex-basis: 300px;
+ margin: 10px;
+ overflow: hidden;
+ border-radius: 5px;;
+}
+
+.special_container img{
+  position: absolute;
+  width: 290px;
+   background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    margin-top: 10px;
+  
+}
+.special_card_container{
+  display: flex;
+}
+
+.header1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header1 h1{
+  margin-top: 50px;
+}
+
