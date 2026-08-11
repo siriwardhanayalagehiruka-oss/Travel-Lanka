@@ -18,7 +18,7 @@ html, body {
   margin: 0;
 }
 
-/* background images */
+/* background images */ 
 .relativ-box{
   width: 100%;
   height: 100vh;
@@ -28,7 +28,7 @@ html, body {
 .relativ-box img {
   width: 100%;
   height: 100vh;
-  object-fit: cover;
+  object-fit: cover; 
   
 }
 
@@ -192,8 +192,10 @@ header nav .ul-list li a {
 
 .first_slide{
     width: 100%;
-     background: linear-gradient(90deg, blue, white, red); 
-    height: fit-content;
+    background: rgb(231, 230, 230);
+    background-repeat: no-repeat;
+    background-size: cover;
+     height: fit-content; 
 }
 
  .first_slide .special_card_container{
@@ -201,28 +203,36 @@ header nav .ul-list li a {
   flex-flow: row wrap; 
 justify-content: center;
     margin-top: 70px;
+    padding-bottom: 70px;
 } 
 
 .special_container{
   display: block;
   position: relative;
   width: 300px;
-  height: 800px;
-  background: red;
+  height: 1000px;
+  background: transparent;
+  box-shadow: 10px 10px 20px rgb(203, 198, 198);
   flex-basis: 300px;
  margin: 10px;
  overflow: hidden;
- border-radius: 5px;;
+ border-radius: 5px;
+ transition: all 0.5s ease;
+}
+
+.special_container:hover{
+  transform: scale(1.03);
 }
 
 .special_container img{
-  position: absolute;
-  width: 290px;
+  position: relative;
+  width: 289px;
    background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 300px;
-    margin-top: 10px;
+    margin: 5px;
+    border-radius: 5px;
   
 }
 .special_card_container{
@@ -239,3 +249,111 @@ justify-content: center;
   margin-top: 50px;
 }
 
+/* in side the special card containerd */
+#card_details{
+  display: grid;
+  grid-template-columns: 60px 240px;
+  grid-template-rows: 65px 65px 65px 65px 65px 65px 65px;
+  gap: 10px 0px;
+   grid-template-areas:
+    "svg1 day1"
+    "svg2 day2"
+    "svg3 day3"
+    "svg4 day4"
+    "svg5 day5"
+    "svg6 day6"
+    "svg7 day7"
+    ;
+}
+
+#days{
+  margin-top: 10px;
+  margin-left: 15px;
+  cursor: default;
+}
+
+#days h2{
+  font-size: 20px;
+}
+
+#days p{
+  font-size: 15px;
+}
+
+#svg_cards{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+#svg_div{
+  border: 2px solid rgb(36, 84, 9);
+  border-radius: 50%;
+  align-self: center;
+  justify-self: center;
+  padding: 4px 4px;
+}
+
+.card_p{
+ text-align: center;
+ cursor: default;
+}
+
+.card_h1{
+  font-size: 25px;
+  text-align: center;
+  cursor: default;
+}
+
+.price {
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+
+    width: 290px;
+    height: 70px;
+
+    border-top: 2px solid black;
+   
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price h1 {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+
+    margin: 0;
+    font-size: 20px;
+}
+
+.price p {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+
+    margin: 0;
+    font-size: 20px;
+}
+
+.price p span{
+   font-size: 15px;
+}
+
+.price button {
+    padding: 15px 15px;
+    border-radius: 15px;
+    border: none;
+    margin-left: auto;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    color: #ffffff;
+}
+
+.price button:hover {
+    transform: scale(1.1);
+}
