@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url(holiday.css);
+@import url(footer.css);
 
 *{
     font-family: 'Roboto', sans-serif;
@@ -357,3 +359,37 @@ justify-content: center;
 .price button:hover {
     transform: scale(1.1);
 }
+
+
+
+
+
+/* loading image */
+
+    #loader {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      background: #111827;
+      z-index: 9999;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    } 
+
+    #loader.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 5px solid #374151;
+      border-top-color: #60a5fa;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }

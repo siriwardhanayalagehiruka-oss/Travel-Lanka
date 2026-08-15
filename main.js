@@ -1,10 +1,13 @@
+
+
+
+
+
+
+
 let srideImage = document.querySelector("#slide_img");
 
-let main_btn = document.getElementById('main_btn');
 
-main_btn.onclick = function () {
-    alert('Hey');
-};
 
 let images = [
     "images/home_a.webp",
@@ -155,12 +158,16 @@ const destinations = [
 
 
 ];
+
+
 destinations.forEach(place => {
     console.log(place);
 });
 
 const container = document.querySelector(".special_card_container");
 
+if (container) {
+    
 destinations.forEach(destination => {
     container.innerHTML += `
         <div class="special_container">
@@ -222,3 +229,107 @@ destinations.forEach(destination => {
             </div>
     `;
 })
+
+}
+
+
+
+
+
+
+
+
+//holiday package
+const holiday_javaScript = [
+    {
+          image: "images/Holiday/holyday1.jpg",
+          type: "Cultural Triangle Tour",
+          places:"Sigiriya . Kandy . Nuwara Eliya",
+          price:"$450",
+          people:"per person"
+    },
+
+    {
+          image: "images/Holiday/holyday1.jpg",
+          type: "Cultural Triangle Tour",
+          places:"Sigiriya . Kandy . Nuwara Eliya",
+          price:"$450",
+          people:"per person"
+    },
+
+    {
+          image: "images/Holiday/holyday1.jpg",
+          type: "Cultural Triangle Tour",
+          places:"Sigiriya . Kandy . Nuwara Eliya",
+          price:"$450",
+          people:"per person"
+    },
+
+    {
+          image: "images/Holiday/holyday1.jpg",
+          type: "Cultural Triangle Tour",
+          places:"Sigiriya . Kandy . Nuwara Eliya",
+          price:"$450",
+          people:"per person"
+    }
+
+    
+];
+
+
+holiday_javaScript.forEach(place => {
+    console.log(place);
+});
+
+const holiday_container = document.querySelector(".holiday_card_container");
+
+if (holiday_container) {
+    
+
+holiday_javaScript.forEach(holiday => {
+    holiday_container.innerHTML += `
+        <div class="holiday_container">
+                <div class="holiday_container_img">
+                  <img src="${holiday.image}" alt="">
+                </div>
+
+                <div class="grid">
+                    <div style="grid-area: Header;" class="header_div">
+                      <h1>${holiday.type}</h1>
+                      <p>${holiday.places}</p>
+                    </div>
+
+                    <div id="guidesvg" style="grid-area: guide1;">
+                      <img src="svg2/hotel.svg" alt="">
+                      <p>Guide</p>
+                    </div>
+
+                    <div id="guidesvg" style="grid-area: guide2;">
+                      <img src="svg2/transport.svg" alt="">
+                      <p>Guide</p>
+                    </div>
+
+                    <div id="guidesvg" style="grid-area: guide3;">
+                      <img src="svg2/meals.svg" alt="">
+                      <p>Guide</p>
+                    </div>
+
+                    <div id="guidesvg" style="grid-area: guide4;">
+                      <img src="svg2/guide.svg" alt="">
+                      <p>Guide</p>
+                    </div>
+
+                    <div style="grid-area: cost;" class="holiday_cost">
+                      <p><span>${holiday.price}</span>${holiday_javaScript.people}</p>
+                      <button>View Details</button>
+                    </div>
+
+                </div>
+                
+            
+          </div>
+        
+    `;
+})
+
+}
